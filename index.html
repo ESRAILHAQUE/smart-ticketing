@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rifat Paribahan</title>
+    <!--DaisyUi and Tailwind CSS cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Css -->
+    <!--Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Font Awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- custom tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-color": "#1DD100",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .raleway {
+        font-family: "Raleway", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="raleway">
+    <!-- Header section start -->
+    <header class="mx-4 lg:mx-32">
+      <!-- Navbar section Start -->
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Home</a></li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li><a>Destination</a></li>
+              <li><a href="#">Search</a></li>
+            </ul>
+          </div>
+          <a class="text-3xl font-extrabold hidden lg:block md:block"
+            >Rifat Paribahan</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li><a>Destination</a></li>
+            <li><a href="#">Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a
+            href="#"
+            class="btn bg-[#1DD1001A] text-primary-color text-xl border-primary-color"
+            >Bus <i class="fa-solid fa-van-shuttle"></i
+          ></a>
+        </div>
+      </div>
+      <!-- Navbar sectin End -->
+    </header>
+    <!-- Header section End -->
+    <!-- main section Start -->
+    <main class="mx-4 lg:mx-32">
+      <!-- Banner section start -->
+      <section>
+        <div
+          class="hero min-h-screen rounded-lg"
+          style="background-image: url(images/banner.png)"
+        >
+          <div class="hero-overlay bg-opacity-0"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div>
+              <h1 class="mb-5 text-5xl font-bold text-white">
+                End-to-End Travel with
+              </h1>
+              <p class="mb-5 text-5xl font-bold text-primary-color">
+                Rifat Paribahan
+              </p>
+              <p class="mb-5 text-white">
+                Embark on unforgettable journeys with our premier bus travel
+                agency, where comfort and convenience intersect.
+              </p>
+              <button
+                class="btn bg-primary-color text-black hover:text-primary-color hover:border-primary-color border-primary-color hover:bg-transparent text-xl"
+              >
+                Buy Tickets
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Banner section End -->
+      <!-- coupoun section start -->
+      <section class="my-20">
+        <div>
+            <h2 class="text-center text-5xl font-bold">Best offers for you</h2>
+            <div>
+                <div class="bg-[#FFBF0F]">
+                   
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- Coupoun sectin End -->
+    </main>
+    <!-- Main section End -->
+    <!-- Footer section start -->
+    <footer></footer>
+    <!-- Footer section End -->
+  </body>
+</html>
