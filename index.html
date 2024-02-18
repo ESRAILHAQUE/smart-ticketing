@@ -148,15 +148,15 @@
           >
             <div class="relative w-full">
               <div
-                class="bg-[#FFBF0F] flex px-2 items-center lg:px-5 py-5 lg:py-10 rounded-lg justify-between h-[220px]"
+                class="bg-[#FFBF0F] flex px-2 md:justify-evenly items-center lg:px-5 py-5 lg:py-10 rounded-lg justify-between h-[220px]"
               >
                 <div>
-                  <h1 class="text-3xl lg:text-4xl">15% OFF</h1>
+                  <h1 class="text-3xl md:text-4xl lg:text-4xl">15% OFF</h1>
                   <p class="text-xl py-2">on your next purchase</p>
                   <p class="text-lg">till January 2024</p>
                 </div>
                 <div>
-                  <h1 class="lg:text-4xl pb-2">NEW15</h1>
+                  <h1 class="md:text-4xl text-2xl lg:text-4xl pb-2">NEW15</h1>
                   <p class="lg:text-xl">Coupoun Code</p>
                 </div>
               </div>
@@ -166,15 +166,17 @@
             </div>
             <div class="relative w-full">
               <div
-                class="bg-[#F78C9C] flex items-center px-2 lg:px-5 py-5 lg:py-10 rounded-lg justify-evenly h-[220px]"
+                class="bg-[#F78C9C] flex items-center md:justify-evenly px-2 lg:px-5 py-5 lg:py-10 rounded-lg justify-between h-[220px]"
               >
                 <div>
-                  <h1 class="text-3xl lg:text-4xl">20% OFF</h1>
+                  <h1 class="text-3xl md:text-4xl lg:text-4xl">20% OFF</h1>
                   <p class="text-xl py-2">on your next purchase</p>
                   <p class="text-lg">till January 2024</p>
                 </div>
                 <div>
-                  <h1 class="lg:text-4xl pb-2">Couple20</h1>
+                  <h1 class="text-2xl md:text-4xl lg:text-4xl pb-2">
+                    Couple20
+                  </h1>
                   <p class="lg:text-xl">Coupoun Code</p>
                 </div>
               </div>
@@ -259,8 +261,8 @@
         </div>
         <!-- Ticket Title section End-->
         <!-- seat selection section start -->
-        <div class="bg-white drop-shadow-2xl rounded-lg p-4">
-          <div>
+        <div class="bg-white drop-shadow-2xl rounded-lg p-4 flex flex-col lg:flex-row">
+          <div class="lg:w-1/2 lg:border-r-2 border-dashed pr-3">
             <h2 class="text-2xl font-semibold border-b-2 border-dashed pb-4">
               Select Your Seat
             </h2>
@@ -276,13 +278,137 @@
               </div>
             </div>
             <div
-              class="bg-[#0307121A] rounded-md py-3 px-8 inline-flex justify-end"
+              class="bg-[#0307121A] rounded-md py-3 px-8 pb-4 mb-4   float-right"
             >
               <img src="images/wheel.png" alt="" />
             </div>
+            <br> <br> <br>
+            <div>
+              <!-- First seat row -->
+                 <div class="flex gap-2 justify-between">   
+              <div class="flex gap-4 mb-3">
+                 <button class="btn btn bg-primary-color hover:bg-primary-color px-8 py-3 rounded-lg btn" onclick="seatBooking(A1)">A1</button>
+                <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(A2)">A2</button>
+              </div>
+            <div class="flex gap-4 mb-3">
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(A3)">A3</button>
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(A4)">A4</button>
+            </div>
+          </div>
+          <!-- 2nd seat row -->
+           <div class="flex gap-2 justify-between">   
+              <div class="flex gap-4 mb-3">
+                 <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(B1)">B1</button>
+                <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(B2)">B2</button>
+              </div>
+            <div class="flex gap-4 mb-3">
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(B3)">B3</button>
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(B4)">B4</button>
+            </div>
+          </div>
+
+          <!-- 3rd seat row -->
+           <div class="flex gap-2 justify-between">   
+              <div class="flex gap-4 mb-3">
+                 <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(C1)">C1</button>
+                <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(C2)">C2</button>
+              </div>
+            <div class="flex gap-4 mb-3">
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(C3)">C3</button>
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(C4)">C4</button>
+            </div>
+          </div>
+
+          <!-- 4th seat row -->
+           <div class="flex gap-2 justify-between">   
+              <div class="flex gap-4 mb-3">
+                 <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(D1)">D1</button>
+                <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(D2)">D2</button>
+              </div>
+            <div class="flex gap-4 mb-3">
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(D3)">D3</button>
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(D4)">D4</button>
+            </div>
+          </div>
+
+          <!-- 5th seat row -->
+           <div class="flex gap-2 justify-between">   
+              <div class="flex gap-4 mb-3">
+                 <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(E1)">E1</button>
+                <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(E2)">E2</button>
+              </div>
+            <div class="flex gap-4 mb-3">
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(E3)">E3</button>
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(E4)">E4</button>
+            </div>
+          </div>
+
+          <!-- 6th seat row -->
+           <div class="flex gap-2 justify-between">   
+              <div class="flex gap-4 mb-3">
+                 <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(F1)">F1</button>
+                <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(F2)">F2</button>
+              </div>
+            <div class="flex gap-4 mb-3">
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(F3)">F3</button>
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(F4)">F4</button>
+            </div>
+          </div>
+
+          <!-- 7th seat row -->
+           <div class="flex gap-2 justify-between">   
+              <div class="flex gap-4 mb-3">
+                 <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(G1)">G1</button>
+                <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(G2)">G2</button>
+              </div>
+            <div class="flex gap-4 mb-3">
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(G3)">G3</button>
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(G4)">G4</button>
+            </div>
+          </div>
+
+          <!-- 8th seat row -->
+           <div class="flex gap-2 justify-between">   
+              <div class="flex gap-4 mb-3">
+                 <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(H1)">H1</button>
+                <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(H2)">H2</button>
+              </div>
+            <div class="flex gap-4 mb-3">
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(H3)">H3</button>
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(H4)">H4</button>
+            </div>
+          </div>
+          <!-- 9th seat row -->
+         
+           <div class="flex gap-2 justify-between">   
+              <div class="flex gap-4 mb-3">
+                 <button class="btn px-9 py-3 rounded-lg btn" onclick="seatBooking(I1)">I1</button>
+                <button class="btn px-9 py-3 rounded-lg btn" onclick="seatBooking(I2)">I2</button>
+              </div>
+            <div class="flex gap-4 mb-3">
+              <button class="btn px-9 py-3 rounded-lg btn" onclick="seatBooking(I3)">I3</button>
+              <button class="btn px-9 py-3 rounded-lg btn" onclick="seatBooking(I4)">I4</button>
+            </div>
+          </div>
+            <!-- 10th seat row -->
+           <div class="flex gap-2 justify-between">   
+              <div class="flex gap-5 mb-3">
+                 <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(J1)">J1</button>
+                <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(J2)">J2</button>
+              </div>
+            <div class="flex gap-5 mb-3">
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(J3)">J3</button>
+              <button class="btn px-8 py-3 rounded-lg btn" onclick="seatBooking(J4)">J4</button>
+            </div>
+          </div>
+            </div>
           </div>
           <!-- seat form section -->
-          <div></div>
+          <div class="pl-3">
+            <h2 class="text-2xl font-semibold border-b-2 border-dashed pb-4">
+              Select Your Seat
+            </h2>
+          </div>
         </div>
       </section>
       <!-- Ticket Booking section -->
@@ -319,5 +445,6 @@
       </div>
     </footer>
     <!-- Footer section End -->
+    <script src="script.js"></script>
   </body>
 </html>
