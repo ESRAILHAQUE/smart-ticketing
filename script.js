@@ -29,8 +29,7 @@ function seatBooking(seat) {
               liseatPrice.textContent = "550";
               seatPrice.appendChild(liseatPrice);
               totalPrice.textContent = 550 * purchaseSeats.length;
-              applyCoupoun.removeAttribute("disabled");
-              applyCoupoun.setAttribute("enabled", "true");
+               applyCoupoun.disabled = false;
               grandTotalPrice.textContent = parseInt(totalPrice.textContent) - discountPriceInitial;
             
 
@@ -67,7 +66,7 @@ function seatBooking(seat) {
          grandTotalPrice.textContent =
            parseInt(totalPrice.textContent) -
            parseInt(discountPrice.textContent);
-         copuponSection.classList.add("hidden");
+         copuponSection.disabled=true;
     }
     else if (coupounCode === '') {
          alert("Please Enter a coupoun code.")
