@@ -48,7 +48,7 @@
   </head>
   <body class="raleway">
     <!-- Header section start -->
-    <header class="mx-4 md:mx-24 lg:mx-32">
+    <header class="mx-4 md:mx-24 lg:mx-32" id="Home">
       <!-- Navbar section Start -->
       <div class="navbar bg-base-100">
         <div class="navbar-start">
@@ -98,7 +98,7 @@
         <div class="navbar-end">
           <a
             href="#Ticket"
-            class="btn bg-[#1DD1001A] text-primary-color text-xl border-primary-color"
+            class="btn bg-[#1DD1001A] text-primary-color text-xl border-primary-color "
             >Bus <i class="fa-solid fa-van-shuttle"></i
           ></a>
         </div>
@@ -107,7 +107,7 @@
     </header>
     <!-- Header section End -->
     <!-- main section Start -->
-    <main class="mx-5 md:mx-24 lg:mx-32">
+    <main class="mx-5 md:mx-24 lg:mx-32  " id="main">
       <!-- Banner section start -->
       <section>
         <div
@@ -127,11 +127,11 @@
                 Embark on unforgettable journeys with our premier bus travel
                 agency, where comfort and convenience intersect.
               </p>
-              <button
+             <a href="#Ticket"> <button
                 class="btn bg-primary-color text-black hover:text-primary-color hover:border-primary-color border-primary-color hover:bg-transparent text-xl"
               >
                 Buy Tickets
-              </button>
+              </button></a>
             </div>
           </div>
         </div>
@@ -221,7 +221,7 @@
                 </div>
               </div>
               <div
-                class="bg-[#1DD10026] flex p-2 justify-between  rounded items-center gap-2"
+                class="bg-[#1DD10026] flex p-2 justify-between rounded items-center gap-2"
               >
                 <img class="w-8" src="images/seat-green.png" alt="" />
                 <p class="text-primary-color">
@@ -617,14 +617,17 @@
           <!-- seat form section -->
           <div class="lg:w-1/2 mx-3">
             <div class="pl-3 border-b-2 border-dashed">
-              <h2 class="text-2xl font-semibold  pb-4">
-                Select Your Seat
-              </h2>
+              <h2 class="text-2xl font-semibold pb-4">Select Your Seat</h2>
             </div>
             <div class="bg-[#F7F8F8] p-4 my-4 rounded-lg">
               <div class="flex justify-between border-b-2 border-dashed pb-3">
                 <h2 class="font-semibold">
-                  Seat <span id="purchaseTicket" class="bg-primary-color p-1 rounded-xl text-white">0</span>
+                  Seat
+                  <span
+                    id="purchaseTicket"
+                    class="bg-primary-color p-1 rounded-xl text-white"
+                    >0</span
+                  >
                 </h2>
                 <h2 class="font-semibold">Class</h2>
                 <h2 class="font-semibold">Price</h2>
@@ -636,50 +639,108 @@
               </div>
               <div class="flex justify-between mt-2">
                 <p class="font-medium">Total Price</p>
-               <p class="font-medium">BDT <span id="totalPrice" >0</span></p>
-            </div>
-             <div class="flex justify-between mt-2 text-red-600 items-center">
+                <p class="font-medium">BDT <span id="totalPrice">0</span></p>
+              </div>
+              <div class="flex justify-between mt-2 text-red-600 items-center">
                 <p class="font-medium">discount</p>
-               <p class="font-medium"> - <span id="discountPrice" >0</span></p>
-            </div>
-            <!-- apply coupoun -->
-            <div class="flex justify-between bg-white w-full p-3 my-3 rounded-lg " id="copuponSection" >
-              <input type="text" class="border-none outline-none px-3" id="coupounCode" placeholder="Have any copupon?">
-              <button class="btn bg-primary-color" onclick="discount()" id="applyCoupoun" disabled>Apply</button>
-            </div>
-            <div class="flex justify-between mt-2 items-center border-t-2 pt-2">
+                <p class="font-medium">- <span id="discountPrice">0</span></p>
+              </div>
+              <!-- apply coupoun -->
+              <div
+                class="flex flex-col md:flex-row gap-3 lg:gap-0 lg:flex-row justify-between md:bg-white lg:bg-white w-full p-3 my-3 rounded-lg"
+                id="copuponSection"
+              >
+                <input
+                  type="text"
+                  class="border-none outline-none px-3 py-4 lg:py-0"
+                  id="coupounCode"
+                  placeholder="Have any copupon?"
+                />
+                <button
+                  class="btn bg-primary-color"
+                  onclick="discount()"
+                  id="applyCoupoun"
+                  disabled
+                >
+                  Apply
+                </button>
+              </div>
+              <div
+                class="flex justify-between mt-2 items-center border-t-2 pt-2"
+              >
                 <p class="font-medium">Grand Total:</p>
-               <p class="font-medium"> BDT: <span id="grandTotalPrice" >0</span></p>
-            </div>
-
+                <p class="font-medium">
+                  BDT: <span id="grandTotalPrice">0</span>
+                </p>
+              </div>
             </div>
             <!-- Passensers Info -->
-            <div>
+            
               <form action="">
-                <label class="flex flex-col gap-1 font-bold mb-2">Passensers Name*
-              <input type="text" placeholder="Enter your name" class="input input-bordered w-full font-normal" required/>
-              </label>
-              <label class="flex flex-col gap-1 font-bold mb-2">Phone number*
-              <input type="number" placeholder="Enter your Phone number" class="input input-bordered w-full font-normal" required/>
-              </label>
-              <label class="flex flex-col gap-1 font-bold mb-2">Email id
-              <input type="email" placeholder="Enter your email id" class="input input-bordered w-full font-normal" />
-              </label>
-              <button type="submit" class="btn bg-primary-color w-full text-white">Next</button>
+                <label class="flex flex-col gap-1 font-bold mb-2"
+                  >Passensers Name*
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    class="input input-bordered w-full font-normal"
+                    required
+                  />
+                </label>
+                <label class="flex flex-col gap-1 font-bold mb-2"
+                  >Phone number*
+                  <input
+                    type="number"
+                    placeholder="Enter your Phone number"
+                    class="input input-bordered w-full font-normal"
+                    required
+                  />
+                </label>
+                <label class="flex flex-col gap-1 font-bold mb-2"
+                  >Email id
+                  <input
+                    type="email"
+                    placeholder="Enter your email id"
+                    class="input input-bordered w-full font-normal"
+                  />
+                </label>
+                
               </form>
+              <button
+                  type="submit" onclick="submit()"
+                  class="btn bg-primary-color w-full text-white"
+                >
+                  Next
+                </button>
               <div class="flex justify-between mt-4">
                 <a href="">Terms and conditions</a>
                 <a href="">Cancellation Policy</a>
               </div>
-            </div>
+           
           </div>
         </div>
       </section>
       <!-- Ticket Booking section -->
     </main>
+    <!-- Modal SMS -->
+    <div class="bg-[#F2F1F1] rounded-lg px-4  py-3 lg:px-80 lg:py-40 hidden" id="modalSection">
+      <div class="bg-white rounded-md border-2 border-dashed text-center p-4 lg:p-14">
+       <img src="images/success.png" class="text-center inline"/>
+        <h2 class="text-2xl font-bold text-green-500 my-3">SUCCESS</h2>
+        <p class="text-xl font-bold">
+          Thank you for Booking Our Bus Seats. We are working hard to find the
+          best service and deals for you.
+        </p>
+        <p class="text-xl  my-3">
+          Shortly you will find a confirmation in your email.
+        </p>
+        <button class="btn bg-green-500 my-3" onclick="backToWebsite()">Continue</button>
+      </div>
+    </div>
     <!-- Main section End -->
     <!-- Footer section start -->
-    <footer class="items-center p-6 bg-black text-neutral-content text-center mt-12">
+    <footer
+      class="items-center p-6 bg-black text-neutral-content text-center mt-12"
+    >
       <div class="flex flex-col lg:flex-row justify-between mb-4">
         <aside class="items-center">
           <p class="text-2xl font-bold mb-4"><a href="">Rifat Paribahan</a></p>

@@ -76,4 +76,23 @@ function seatBooking(seat) {
     else {
         alert("Invalid Coupoun.")
       }
-  }
+}
+
+// Define the JavaScript functions
+function submit() {
+  let modal = document.getElementById("modalSection");
+  let main = document.getElementById("main");
+  main.classList.add("hidden");
+  modal.classList.remove("hidden");
+ 
+  console.log("main is hidden");
+}
+
+function backToWebsite() {
+    let modal = document.getElementById("modalSection");
+    let main = document.getElementById("main");
+
+    modal.classList.add("hidden");
+    main.classList.remove("hidden");
+}
+
