@@ -9,6 +9,8 @@ let applyCoupoun = document.getElementById("applyCoupoun");
 let discountPrice = document.getElementById("discountPrice");
 let grandTotalPrice = document.getElementById("grandTotalPrice");
 let discountPriceInitial = 0;
+let submitbtn = document.getElementById("submitbtn");
+
 
 function seatBooking(seat) {
   let seatTextContent = seat.textContent.trim();
@@ -31,7 +33,8 @@ function seatBooking(seat) {
       applyCoupoun.disabled = false;
       grandTotalPrice.textContent =
         parseInt(totalPrice.textContent) - discountPriceInitial;
-    }
+      }
+      submitbtn.disabled = false;
 
     purchaseTicket.textContent = purchaseSeats.length;
     totalAvailablesetsText.textContent = 40 - purchaseSeats.length;
