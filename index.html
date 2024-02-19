@@ -44,6 +44,11 @@
       .raleway {
         font-family: "Raleway", sans-serif;
       }
+      .centered-element {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     </style>
   </head>
   <body class="raleway">
@@ -98,7 +103,7 @@
         <div class="navbar-end">
           <a
             href="#Ticket"
-            class="btn bg-[#1DD1001A] text-primary-color text-xl border-primary-color "
+            class="btn bg-[#1DD1001A] text-primary-color text-xl border-primary-color"
             >Bus <i class="fa-solid fa-van-shuttle"></i
           ></a>
         </div>
@@ -107,11 +112,11 @@
     </header>
     <!-- Header section End -->
     <!-- main section Start -->
-    <main class="mx-5 md:mx-24 lg:mx-32  " id="main">
+    <main class="mx-5 md:mx-24 lg:mx-32" id="main">
       <!-- Banner section start -->
-      <section>
+      <section class="relative">
         <div
-          class="hero min-h-screen rounded-lg"
+          class="hero min-h-screen rounded-lg mb-6"
           style="background-image: url(images/banner.png)"
         >
           <div class="hero-overlay bg-opacity-0"></div>
@@ -127,11 +132,45 @@
                 Embark on unforgettable journeys with our premier bus travel
                 agency, where comfort and convenience intersect.
               </p>
-             <a href="#Ticket"> <button
-                class="btn bg-primary-color text-black hover:text-primary-color hover:border-primary-color border-primary-color hover:bg-transparent text-xl"
+              <a href="#Ticket">
+                <button
+                  class="btn bg-primary-color text-black hover:text-primary-color hover:border-primary-color border-primary-color hover:bg-transparent text-xl"
+                >
+                  Buy Tickets
+                </button></a
               >
-                Buy Tickets
-              </button></a>
+            </div>
+          </div>
+        </div>
+        <!-- Sticker section -->
+        <div
+          class="flex flex-col lg:flex-row gap-6 lg:absolute lg:left-[12%] lg:right-[12%] -bottom-12"
+        >
+          <div
+            class="bg-white rounded-2xl border-b-2 border-primary-color flex gap-2 px-7 py-7"
+          >
+            <img src="images/people.png" alt="" />
+            <div>
+              <h1 class="font-extrabold text-4xl">500K+</h1>
+              <p>Registered users</p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl border-b-2 border-primary-color flex gap-2 px-5 py-7"
+          >
+            <img src="images/ticket-cupon.png" alt="" />
+            <div>
+              <h1 class="font-extrabold text-4xl">1.7 lacks</h1>
+              <p>Tickets Sold</p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl border-b-2 border-primary-color flex gap-2 px-5 py-7"
+          >
+            <img src="images/stoppage.png" alt="" />
+            <div>
+              <h1 class="font-extrabold text-4xl">80K+</h1>
+              <p>Rental partners</p>
             </div>
           </div>
         </div>
@@ -641,7 +680,7 @@
                 <p class="font-medium">Total Price</p>
                 <p class="font-medium">BDT <span id="totalPrice">0</span></p>
               </div>
-              <div class="flex justify-between mt-2 text-red-600 items-center">
+              <div class=" justify-between mt-2 text-red-600 items-center hidden" id="discountSection">
                 <p class="font-medium">discount</p>
                 <p class="font-medium">- <span id="discountPrice">0</span></p>
               </div>
@@ -675,65 +714,71 @@
               </div>
             </div>
             <!-- Passensers Info -->
-            
-              <form action="">
-                <label class="flex flex-col gap-1 font-bold mb-2"
-                  >Passensers Name*
-                  <input
-                    type="text"
-                    placeholder="Enter your name"
-                    class="input input-bordered w-full font-normal"
-                    required
-                  />
-                </label>
-                <label class="flex flex-col gap-1 font-bold mb-2"
-                  >Phone number*
-                  <input
-                    type="number"
-                    placeholder="Enter your Phone number"
-                    class="input input-bordered w-full font-normal"
-                    required
-                  />
-                </label>
-                <label class="flex flex-col gap-1 font-bold mb-2"
-                  >Email id
-                  <input
-                    type="email"
-                    placeholder="Enter your email id"
-                    class="input input-bordered w-full font-normal"
-                  />
-                </label>
-                
-              </form>
-              <button
-                  type="submit" onclick="submit()"
-                  class="btn bg-primary-color w-full text-white"
-                >
-                  Next
-                </button>
-              <div class="flex justify-between mt-4">
-                <a href="">Terms and conditions</a>
-                <a href="">Cancellation Policy</a>
-              </div>
-           
+
+            <form action="">
+              <label class="flex flex-col gap-1 font-bold mb-2"
+                >Passensers Name*
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  class="input input-bordered w-full font-normal"
+                  required
+                />
+              </label>
+              <label class="flex flex-col gap-1 font-bold mb-2"
+                >Phone number*
+                <input
+                  type="number"
+                  placeholder="Enter your Phone number"
+                  class="input input-bordered w-full font-normal"
+                  required
+                />
+              </label>
+              <label class="flex flex-col gap-1 font-bold mb-2"
+                >Email id
+                <input
+                  type="email"
+                  placeholder="Enter your email id"
+                  class="input input-bordered w-full font-normal"
+                />
+              </label>
+            </form>
+            <button
+              type="submit"
+              onclick="submit()"
+              class="btn bg-primary-color w-full text-white"
+            >
+              Next
+            </button>
+            <div class="flex justify-between mt-4">
+              <a href="">Terms and conditions</a>
+              <a href="">Cancellation Policy</a>
+            </div>
           </div>
         </div>
       </section>
       <!-- Ticket Booking section -->
     </main>
     <!-- Modal SMS -->
-    <div class="bg-[#F2F1F1] rounded-lg px-4  py-3 lg:px-80 lg:py-40 hidden" id="modalSection">
-      <div class="bg-white rounded-md border-2 border-dashed text-center p-4 lg:p-14">
-       <img src="images/success.png" class="text-center inline"/>
+    <div
+      class="bg-[#F2F1F1] rounded-lg px-4 py-3 lg:px-80 lg:py-40 hidden"
+      id="modalSection"
+    >
+      <div
+        class="bg-white rounded-md border-2 border-dashed text-center p-4 lg:p-14"
+      >
+        <img src="images/success.png" class="text-center inline" />
         <h2 class="text-2xl font-bold text-green-500 my-3">SUCCESS</h2>
         <p class="text-xl font-bold">
           Thank you for Booking Our Bus Seats. We are working hard to find the
           best service and deals for you.
         </p>
-        <p class="text-xl  my-3">
+        <p class="text-xl my-3">
           Shortly you will find a confirmation in your email.
         </p>
-        <button class="btn bg-green-500 my-3" onclick="backToWebsite()">Continue</button>
+        <button class="btn bg-green-500 my-3" onclick="backToWebsite()">
+          Continue
+        </button>
       </div>
     </div>
     <!-- Main section End -->
@@ -756,7 +801,7 @@
           /></a>
         </nav>
       </div>
-      <div class="flex flex-col lg:flex-row justify-between">
+      <div class="flex flex-col gap-6 lg:flex-row justify-between">
         <div>
           <p>&copy; all rights reserved, Rifat-Ticket services limited.2024</p>
         </div>
