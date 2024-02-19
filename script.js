@@ -85,5 +85,6 @@ function backToWebsite() {
   let main = document.getElementById("main");
 
   modal.classList.add("hidden");
-  main.classList.remove("hidden");
+    main.classList.remove("hidden");
+    location.reload();
 }
