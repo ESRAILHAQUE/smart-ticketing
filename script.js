@@ -30,7 +30,7 @@ function seatBooking(seat) {
               seatPrice.appendChild(liseatPrice);
               totalPrice.textContent = 550 * purchaseSeats.length;
               applyCoupoun.removeAttribute("disabled");
-              applyCoupoun.setAttribute('enabled', true);
+              applyCoupoun.setAttribute("enabled", "true");
               grandTotalPrice.textContent = parseInt(totalPrice.textContent) - discountPriceInitial;
             
 
