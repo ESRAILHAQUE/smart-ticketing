@@ -55,9 +55,11 @@ function seatBooking(seat) {
       
 
     if (coupounCode === "NEW15"  ) {
-        discountPrice.textContent = 0.15 * parseInt(totalPrice.textContent);
-          grandTotalPrice.textContent =
-            parseInt(totalPrice.textContent) - parseInt(discountPrice.textContent);
+        discountPrice.textContent = 0.15 * parseFloat(totalPrice.textContent);
+          grandTotalPrice.textContent = parseFloat(
+            parseFloat(totalPrice.textContent) -
+              parseFloat(discountPrice.textContent)
+          );
         copuponSection.classList.add("hidden");
 
       }
@@ -66,7 +68,7 @@ function seatBooking(seat) {
          grandTotalPrice.textContent =
            parseInt(totalPrice.textContent) -
            parseInt(discountPrice.textContent);
-         copuponSection.disabled=true;
+          copuponSection.classList.add("hidden");
     }
     else if (coupounCode === '') {
          alert("Please Enter a coupoun code.")
