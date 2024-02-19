@@ -621,7 +621,7 @@
                 Select Your Seat
               </h2>
             </div>
-            <div class="bg-[#F7F8F8] p-4 my-4">
+            <div class="bg-[#F7F8F8] p-4 my-4 rounded-lg">
               <div class="flex justify-between border-b-2 border-dashed pb-3">
                 <h2 class="font-semibold">
                   Seat <span id="purchaseTicket" class="bg-primary-color p-1 rounded-xl text-white">0</span>
@@ -629,10 +629,47 @@
                 <h2 class="font-semibold">Class</h2>
                 <h2 class="font-semibold">Price</h2>
               </div>
-              <div class="flex justify-between pt-3">
+              <div class="flex justify-between pt-3 border-b-2 pb-3">
                 <ul id="seatList"></ul>
                 <ul id="seatType"></ul>
                 <ul id="seatPrice"></ul>
+              </div>
+              <div class="flex justify-between mt-2">
+                <p class="font-medium">Total Price</p>
+               <p class="font-medium">BDT <span id="totalPrice" >0</span></p>
+            </div>
+             <div class="flex justify-between mt-2 text-red-600 items-center">
+                <p class="font-medium">discount</p>
+               <p class="font-medium"> - <span id="discountPrice" >0</span></p>
+            </div>
+            <!-- apply coupoun -->
+            <div class="flex justify-between bg-white w-full p-3 my-3 rounded-lg " id="copuponSection" >
+              <input type="text" class="border-none outline-none px-3" id="coupounCode" placeholder="Have any copupon?">
+              <button class="btn bg-primary-color" onclick="discount()" id="applyCoupoun" disabled>Apply</button>
+            </div>
+            <div class="flex justify-between mt-2 items-center border-t-2 pt-2">
+                <p class="font-medium">Grand Total:</p>
+               <p class="font-medium"> BDT: <span id="grandTotalPrice" >0</span></p>
+            </div>
+
+            </div>
+            <!-- Passensers Info -->
+            <div>
+              <form action="">
+                <label class="flex flex-col gap-1 font-bold mb-2">Passensers Name*
+              <input type="text" placeholder="Enter your name" class="input input-bordered w-full font-normal" required/>
+              </label>
+              <label class="flex flex-col gap-1 font-bold mb-2">Phone number*
+              <input type="number" placeholder="Enter your Phone number" class="input input-bordered w-full font-normal" required/>
+              </label>
+              <label class="flex flex-col gap-1 font-bold mb-2">Email id
+              <input type="email" placeholder="Enter your email id" class="input input-bordered w-full font-normal" />
+              </label>
+              <button type="submit" class="btn bg-primary-color w-full text-white">Next</button>
+              </form>
+              <div class="flex justify-between mt-4">
+                <a href="">Terms and conditions</a>
+                <a href="">Cancellation Policy</a>
               </div>
             </div>
           </div>
@@ -642,7 +679,7 @@
     </main>
     <!-- Main section End -->
     <!-- Footer section start -->
-    <footer class="items-center p-6 bg-black text-neutral-content text-center">
+    <footer class="items-center p-6 bg-black text-neutral-content text-center mt-12">
       <div class="flex flex-col lg:flex-row justify-between mb-4">
         <aside class="items-center">
           <p class="text-2xl font-bold mb-4"><a href="">Rifat Paribahan</a></p>

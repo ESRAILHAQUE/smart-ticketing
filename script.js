@@ -4,6 +4,12 @@ let totalAvailablesetsText = document.getElementById("totalAvailablesets");
 let seatList = document.getElementById("seatList");
 let seatType = document.getElementById("seatType");
 let seatPrice = document.getElementById("seatPrice");
+let totalPrice = document.getElementById("totalPrice");
+let applyCoupoun = document.getElementById("applyCoupoun");
+let discountPrice = document.getElementById("discountPrice");
+let grandTotalPrice = document.getElementById("grandTotalPrice");
+let discountPriceInitial = 0;
+
 
 function seatBooking(seat) {
     let seatTextContent = seat.textContent.trim();
@@ -17,11 +23,17 @@ function seatBooking(seat) {
               li.textContent = seat.textContent.trim();
               seatList.appendChild(li);
               let liSeatType = document.createElement("li");
-              liSeatType.textContent = "Economics";
+              liSeatType.textContent = "Economy";
               seatType.appendChild(liSeatType);
               let liseatPrice = document.createElement("li");
               liseatPrice.textContent = "550";
               seatPrice.appendChild(liseatPrice);
+              totalPrice.textContent = 550 * purchaseSeats.length;
+              applyCoupoun.removeAttribute("disabled");
+              applyCoupoun.setAttribute('enabled', true);
+              grandTotalPrice.textContent = parseInt(totalPrice.textContent) - discountPriceInitial;
+            
+
         }
         
         purchaseTicket.textContent = purchaseSeats.length;
@@ -38,3 +50,29 @@ function seatBooking(seat) {
     
 
 }
+  function discount() {
+      let coupounCode = document.getElementById("coupounCode").value;
+      let copuponSection = document.getElementById("copuponSection");
+      
+
+    if (coupounCode === "NEW15"  ) {
+        discountPrice.textContent = 0.15 * parseInt(totalPrice.textContent);
+          grandTotalPrice.textContent =
+            parseInt(totalPrice.textContent) - parseInt(discountPrice.textContent);
+        copuponSection.classList.add("hidden");
+
+      }
+    else if (coupounCode === "Couple 20") {
+        discountPrice.textContent = 0.2 * parseInt(totalPrice.textContent);
+         grandTotalPrice.textContent =
+           parseInt(totalPrice.textContent) -
+           parseInt(discountPrice.textContent);
+         copuponSection.classList.add("hidden");
+    }
+    else if (coupounCode === '') {
+         alert("Please Enter a coupoun code.")
+        }
+    else {
+        alert("Invalid Coupoun.")
+      }
+  }
